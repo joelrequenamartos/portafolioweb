@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header">
     <nav class="nav container">
       <a href="#" class="logo mono">requena.spec.ts</a>
@@ -30,13 +31,20 @@
   <main>
     <!-- HERO -->
     <section class="hero container">
-      <p class="assertion mono"><span class="tok-fn">expect</span>(<span class="tok-arg">software</span>).<span class="tok-fn">toShipWithConfidence</span>()<span class="tok-status"> // ✓ PASS</span></p>
+      <p class="assertion mono">
+        <span id="assertion-typed"></span><span class="caret" aria-hidden="true"></span><span id="assertion-status" class="tok-status"></span>
+      </p>
       <h1 class="hero-name">Joel <em>Requena</em></h1>
       <p class="hero-role"><span data-i18n="hero.role">QA Automation Engineer</span></p>
-      <p class="hero-text" data-i18n="hero.text">
-        Automatizo pruebas para que el software llegue a producción con confianza.
-        Especializado en frameworks de testing E2E, API y CI/CD.
-      </p>
+      <ul class="hero-stack mono" aria-label="Stack técnico">
+        <li>Playwright</li>
+        <li>TypeScript</li>
+        <li>Python</li>
+        <li>GitHub Actions</li>
+        <li>Postman</li>
+        <li>SQL</li>
+        <li>Git</li>
+      </ul>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">Ver proyectos</a>
         <a href="assets/cv.pdf" class="btn btn-outline" download data-i18n="hero.ctaCv">Descargar CV</a>
@@ -44,7 +52,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section container">
+    <section id="about" class="section container reveal">
       <header class="section-head">
         <span class="status mono">✓ PASS</span>
         <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
@@ -60,13 +68,14 @@
           pruebas E2E, y con Postman/REST Assured para testing de APIs, todo
           integrado en pipelines de CI/CD.
         </p>
+        <p class="credential mono">ISTQB® Foundation Level <span class="project-wip-tag">WIP</span></p>
         <h3 class="sub-title" data-i18n="about.expTitle">Experiencia</h3>
         <ul id="experience-list" class="experience-list"></ul>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section container">
+    <section id="projects" class="section container reveal">
       <header class="section-head">
         <span class="status mono">✓ PASS</span>
         <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
@@ -75,7 +84,7 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section container">
+    <section id="skills" class="section container reveal">
       <header class="section-head">
         <span class="status mono">✓ PASS</span>
         <h2 class="section-title" data-i18n="skills.title">Skills & Herramientas</h2>
@@ -84,17 +93,16 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section container contact">
+    <section id="contact" class="section container contact reveal">
       <header class="section-head">
         <span class="status status-fail mono">✗ FAIL — missing_contact</span>
         <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
       </header>
-      <p class="contact-text" data-i18n="contact.text">¿Hablamos? Estoy abierto a nuevas oportunidades y colaboraciones.</p>
       <div class="contact-row">
         <aside class="contact-card">
           <p class="contact-card-name">Joel Requena</p>
           <p class="contact-card-role" data-i18n="contact.cardRole">QA Automation Engineer</p>
-          <p class="mono"><a href="mailto:joelrequena1903@gmail.com">joelrequena1903@gmail.com</a></p>
+          <p class="mono"><a href="mailto:joelrequenamartos@outlook.com">joelrequenamartos@outlook.com</a></p>
           <div class="contact-card-cta">
             <a href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn ↗</a>
             <a href="https://github.com/USERNAME" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>

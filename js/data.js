@@ -12,8 +12,8 @@ const PORTFOLIO_DATA = {
       company: "Rank Holding",
       period: "Abril 2025 — Presente",
       description: {
-        es: "Automatización de pruebas E2E y de API, integración en CI/CD.",
-        en: "E2E and API test automation, CI/CD integration."
+        es: "Automatización Front-End con Playwright, Back-End y Data Testing con Python, y pruebas de rendimiento con JMeter, integradas en CI/CD.",
+        en: "Front-End automation with Playwright, Back-End and Data Testing with Python, and performance testing with JMeter, integrated into CI/CD."
       }
     },
     {
@@ -31,31 +31,34 @@ const PORTFOLIO_DATA = {
     {
       title: { es: "Framework E2E con Playwright", en: "E2E Framework with Playwright" },
       description: {
-        es: "Framework de pruebas end-to-end con Playwright y TypeScript: Page Object Model, reporting y ejecución en CI.",
-        en: "End-to-end testing framework with Playwright and TypeScript: Page Object Model, reporting and CI execution."
+        es: "Framework de pruebas end-to-end para web con Playwright y TypeScript: Page Object Model, reporting y ejecución en CI.",
+        en: "End-to-end web testing framework with Playwright and TypeScript: Page Object Model, reporting and CI execution."
       },
-      tags: ["Playwright", "TypeScript", "GitHub Actions"],
-      github: "https://github.com/USERNAME/proyecto-1",
+      tags: ["Playwright", "TypeScript"],
+      status: "prep",
+      github: "",
       demo: ""
     },
     {
-      title: { es: "API Testing con Postman/Newman", en: "API Testing with Postman/Newman" },
+      title: { es: "Suite Back-End con Python + pytest", en: "Back-End Suite with Python + pytest" },
       description: {
-        es: "Suite de pruebas de API REST con colecciones de Postman ejecutadas en pipeline con Newman.",
-        en: "REST API test suite with Postman collections run in a pipeline with Newman."
+        es: "Suite de pruebas de back-end en Python puro con pytest: fixtures, mocking y validación de lógica de negocio.",
+        en: "Pure Python back-end test suite with pytest: fixtures, mocking and business logic validation."
       },
-      tags: ["Postman", "Newman", "REST API"],
-      github: "https://github.com/USERNAME/proyecto-2",
+      tags: ["Python", "pytest"],
+      status: "prep",
+      github: "",
       demo: ""
     },
     {
-      title: { es: "Automatización con Selenium + Java", en: "Automation with Selenium + Java" },
+      title: { es: "Suite de Testing de APIs", en: "API Testing Suite" },
       description: {
-        es: "Proyecto de automatización web con Selenium WebDriver, Java, TestNG y patrón Page Object.",
-        en: "Web automation project with Selenium WebDriver, Java, TestNG and the Page Object pattern."
+        es: "Suite de pruebas de API REST con validación de contratos, casos negativos e integración en pipeline.",
+        en: "REST API test suite with contract validation, negative cases and pipeline integration."
       },
-      tags: ["Selenium", "Java", "TestNG"],
-      github: "https://github.com/USERNAME/proyecto-3",
+      tags: ["Postman", "REST API"],
+      status: "prep",
+      github: "",
       demo: ""
     }
   ],
