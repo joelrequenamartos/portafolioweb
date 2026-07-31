@@ -8,9 +8,9 @@
 const PORTFOLIO_DATA = {
   experience: [
     {
-      role: { es: "QA Automation Engineer", en: "QA Automation Engineer" },
-      company: "Empresa Ejemplo",
-      period: "2024 — Presente",
+      role: { es: "QA Analyst and Automation Tester", en: "QA Analyst and Automation Tester" },
+      company: "Rank Holding",
+      period: "Abril 2025 — Presente",
       description: {
         es: "Automatización de pruebas E2E y de API, integración en CI/CD.",
         en: "E2E and API test automation, CI/CD integration."
@@ -18,7 +18,7 @@ const PORTFOLIO_DATA = {
     },
     {
       role: { es: "QA Tester", en: "QA Tester" },
-      company: "Otra Empresa",
+      company: "Zitro Games",
       period: "2022 — 2024",
       description: {
         es: "Testing manual y funcional, diseño de casos de prueba.",

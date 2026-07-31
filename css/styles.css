@@ -9,7 +9,7 @@
   --paper: #e8e2d6;          /* texto: papel cálido */
   --paper-dim: #a49c92;
   --muted: #6d6577;
-  --accent: #ffee00;         /* amarillo de acento */
+  --accent: #8fb996;         /* verde de acento, igual que PASS */
   --pass: #8fb996;           /* verde de las etiquetas PASS */
   --fail: #c96f5e;           /* rojo de la etiqueta FAIL */
   --rule: #2a2530;           /* hairlines */
@@ -225,6 +225,11 @@ a:focus-visible, button:focus-visible {
   margin-top: 0.4rem;
 }
 
+.title-hl { transition: color 0.2s; }
+
+.section-title:hover .title-hl,
+.lede:hover .title-hl { color: var(--accent); }
+
 /* ---------- About ---------- */
 .about-text p { margin-bottom: 1.2rem; max-width: 38em; }
 
@@ -248,8 +253,16 @@ a:focus-visible, button:focus-visible {
 .experience-list { list-style: none; }
 
 .experience-list li {
-  padding: 1.2rem 0;
+  padding: 1.2rem;
+  margin: 0 -1.2rem;
   border-top: 1px solid var(--rule);
+  border-radius: 10px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.experience-list li:hover {
+  transform: scale(1.02);
+  background: var(--ink-raised);
 }
 
 .exp-role {
@@ -274,9 +287,19 @@ a:focus-visible, button:focus-visible {
   display: grid;
   grid-template-columns: 3rem 1fr;
   gap: 1.5rem;
-  padding: 2rem 0;
+  padding: 2rem 1.2rem;
+  margin: 0 -1.2rem;
   border-top: 1px solid var(--rule);
+  border-radius: 10px;
+  transition: transform 0.2s, background 0.2s;
 }
+
+.project-row:hover {
+  transform: scale(1.02);
+  background: var(--ink-raised);
+}
+
+.project-row:hover h3 { color: var(--accent); }
 
 .project-check {
   font-family: var(--font-mono);
@@ -293,8 +316,6 @@ a:focus-visible, button:focus-visible {
   color: var(--paper);
   transition: color 0.2s;
 }
-
-.project-row:hover h3 { color: var(--accent); }
 
 .project-row p {
   margin-top: 0.6rem;
@@ -333,8 +354,21 @@ a:focus-visible, button:focus-visible {
 /* ---------- Skills ---------- */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-  gap: 2.5rem 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.skill-group {
+  background: var(--ink-raised);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1.4rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.skill-group:hover {
+  border-color: var(--accent);
+  transform: scale(1.02);
 }
 
 .skill-group h3 {
@@ -352,13 +386,20 @@ a:focus-visible, button:focus-visible {
 .skill-group ul { list-style: none; }
 
 .skill-group li {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--paper-dim);
   padding: 0.2rem 0;
 }
 
+.skill-group li::before {
+  content: "✓ ";
+  color: var(--pass);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
 /* ---------- Contact ---------- */
-.contact { padding-bottom: 7rem; }
+.contact { padding-bottom: 7rem; text-align: center; }
 
 .contact-text {
   font-family: var(--font-display);
@@ -367,23 +408,60 @@ a:focus-visible, button:focus-visible {
   font-size: 1.5rem;
   color: var(--paper);
   max-width: 26em;
-  margin-bottom: 2.2rem;
+  margin: 0 auto 2.5rem;
 }
 
-.social-links {
+.contact-row {
   display: flex;
-  gap: 2rem;
-  margin-top: 3rem;
-  font-size: 0.8rem;
+  justify-content: center;
 }
 
-.social-links a {
-  color: var(--muted);
+.contact-card {
+  background: var(--ink-raised);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 2.2rem 3rem;
+  min-width: min(360px, 100%);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.contact-card:hover {
+  border-color: var(--accent);
+  transform: scale(1.02);
+}
+
+.contact-card p { margin: 0; }
+
+.contact-card-name {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--paper);
+}
+
+.contact-card-role {
+  font-style: italic;
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem !important;
+}
+
+.contact-card .mono { font-size: 0.8rem; line-height: 1.9; }
+
+.contact-card-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+.contact-card .mono a {
+  color: var(--paper-dim);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.social-links a:hover { color: var(--accent); }
+.contact-card .mono a:hover { color: var(--accent); }
 
 /* ---------- Footer ---------- */
 .site-footer {
