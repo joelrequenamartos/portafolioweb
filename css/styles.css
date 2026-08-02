@@ -472,7 +472,8 @@ a:focus-visible, button:focus-visible {
   padding-top: 0.5rem;
 }
 
-.project-check.is-prep { color: var(--muted); }
+.project-check.is-wip { color: var(--muted); }
+.project-check.is-planned { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.1em; }
 
 .project-status {
   display: inline-block;
@@ -484,6 +485,14 @@ a:focus-visible, button:focus-visible {
   padding: 0.15rem 0.6rem;
   margin: 0.4rem 0 0.2rem;
 }
+
+.project-status.is-planned {
+  color: var(--muted);
+  border-style: dashed;
+}
+
+.reveal.is-visible .project-row.is-planned { opacity: 0.62; }
+.reveal.is-visible .project-row.is-planned:hover { opacity: 0.85; }
 
 .project-row h3 {
   font-family: var(--font-display);
@@ -529,6 +538,16 @@ a:focus-visible, button:focus-visible {
 .project-links a:hover { color: var(--accent); border-color: var(--accent); }
 
 .project-wip { color: var(--paper-dim); }
+
+.project-wip a {
+  color: var(--paper-dim);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 0.35s var(--spring), border-color 0.35s var(--spring);
+}
+
+.project-wip a:hover { color: var(--accent); border-color: var(--accent); }
 
 .project-wip-tag {
   color: var(--fail);

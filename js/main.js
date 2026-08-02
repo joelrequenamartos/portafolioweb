@@ -31,23 +31,35 @@ function renderProjects() {
   const grid = document.getElementById("projects-grid");
   grid.innerHTML = PORTFOLIO_DATA.projects
     .map((p, i) => {
-      const isPrep = p.status === "prep";
-      const links = isPrep
-        ? `<span class="project-wip mono">${t("projects.code")} ↗ <span class="project-wip-tag">${t("projects.wip")}</span></span>`
-        : [
-            p.github ? `<a href="${p.github}" target="_blank" rel="noopener">${t("projects.code")} ↗</a>` : "",
-            p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener">${t("projects.demo")} ↗</a>` : ""
-          ].join("");
+      const isWip = p.status === "wip";
+      const isPlanned = p.status === "planned";
+      const codeLabel = `${t("projects.code")} ↗`;
+
+      let links = "";
+      if (isWip) {
+        links = `<span class="project-wip mono">${
+          p.github ? `<a href="${p.github}" target="_blank" rel="noopener">${codeLabel}</a>` : codeLabel
+        } <span class="project-wip-tag">${t("projects.wip")}</span></span>`;
+      } else if (!isPlanned) {
+        links = [
+          p.github ? `<a href="${p.github}" target="_blank" rel="noopener">${codeLabel}</a>` : "",
+          p.demo ? `<a href="${p.demo}" target="_blank" rel="noopener">${t("projects.demo")} ↗</a>` : ""
+        ].join("");
+      }
+
+      const icon = isPlanned ? "···" : isWip ? "○" : "✓";
+      const statusLabel = isPlanned ? t("projects.planned") : isWip ? t("projects.wip.label") : "";
+
       return `
-      <article class="project-row reveal-item" style="--i: ${i}">
-        <span class="project-check${isPrep ? " is-prep" : ""}" aria-hidden="true">${isPrep ? "○" : "✓"}</span>
+      <article class="project-row reveal-item${isPlanned ? " is-planned" : ""}" style="--i: ${i}">
+        <span class="project-check${isWip ? " is-wip" : ""}${isPlanned ? " is-planned" : ""}" aria-hidden="true">${icon}</span>
         <div>
           <h3>${p.title[currentLang]}</h3>
-          ${isPrep ? `<span class="project-status mono">${t("projects.prep")}</span>` : ""}
+          ${statusLabel ? `<span class="project-status mono${isPlanned ? " is-planned" : ""}">${statusLabel}</span>` : ""}
           <p>${p.description[currentLang]}</p>
           <div class="project-meta">
             <div class="project-tags">${p.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
-            <div class="project-links">${links}</div>
+            ${links ? `<div class="project-links">${links}</div>` : ""}
           </div>
         </div>
       </article>`;

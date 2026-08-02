@@ -35,8 +35,8 @@ const PORTFOLIO_DATA = {
         en: "End-to-end web testing framework with Playwright and TypeScript: Page Object Model, reporting and CI execution."
       },
       tags: ["Playwright", "TypeScript"],
-      status: "prep",
-      github: "",
+      status: "wip",
+      github: "https://github.com/joelrequenamartos/playwright-ts-e2e/tree/develop",
       demo: ""
     },
     {
@@ -46,7 +46,7 @@ const PORTFOLIO_DATA = {
         en: "Pure Python back-end test suite with pytest: fixtures, mocking and business logic validation."
       },
       tags: ["Python", "pytest"],
-      status: "prep",
+      status: "planned",
       github: "",
       demo: ""
     },
@@ -57,7 +57,7 @@ const PORTFOLIO_DATA = {
         en: "REST API test suite with contract validation, negative cases and pipeline integration."
       },
       tags: ["Postman", "REST API"],
-      status: "prep",
+      status: "planned",
       github: "",
       demo: ""
     }
