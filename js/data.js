@@ -31,12 +31,22 @@ const PORTFOLIO_DATA = {
     {
       title: { es: "Framework E2E con Playwright", en: "E2E Framework with Playwright" },
       description: {
-        es: "Framework de pruebas end-to-end para web con Playwright y TypeScript: Page Object Model, reporting y ejecución en CI.",
-        en: "End-to-end web testing framework with Playwright and TypeScript: Page Object Model, reporting and CI execution."
+        es: "Suite E2E para la tienda demo SauceDemo: login, carrito y checkout, con Page Object Model y fixtures propias para preparar el estado previo de cada test. CI/CD con GitHub Actions en cada push/PR a main y develop.",
+        en: "E2E suite for the SauceDemo store: login, cart and checkout, with Page Object Model and custom fixtures to set up each test's starting state. CI/CD with GitHub Actions on every push/PR to main and develop."
       },
-      tags: ["Playwright", "TypeScript"],
+      tags: ["Playwright", "TypeScript", "GitHub Actions"],
+      github: "https://github.com/joelrequenamartos/playwright-ts-e2e",
+      demo: ""
+    },
+    {
+      title: { es: "Suite de Testing de APIs", en: "API Testing Suite" },
+      description: {
+        es: "Suite de pruebas de API REST con validación de contratos, casos negativos e integración en pipeline.",
+        en: "REST API test suite with contract validation, negative cases and pipeline integration."
+      },
+      tags: ["Python", "Requests", "REST API"],
       status: "wip",
-      github: "https://github.com/joelrequenamartos/playwright-ts-e2e/tree/develop",
+      github: "",
       demo: ""
     },
     {
@@ -46,17 +56,6 @@ const PORTFOLIO_DATA = {
         en: "Pure Python back-end test suite with pytest: fixtures, mocking and business logic validation."
       },
       tags: ["Python", "pytest"],
-      status: "planned",
-      github: "",
-      demo: ""
-    },
-    {
-      title: { es: "Suite de Testing de APIs", en: "API Testing Suite" },
-      description: {
-        es: "Suite de pruebas de API REST con validación de contratos, casos negativos e integración en pipeline.",
-        en: "REST API test suite with contract validation, negative cases and pipeline integration."
-      },
-      tags: ["Postman", "REST API"],
       status: "planned",
       github: "",
       demo: ""
