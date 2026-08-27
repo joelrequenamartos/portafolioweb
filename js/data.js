@@ -45,7 +45,6 @@ const PORTFOLIO_DATA = {
         en: "REST API test suite with contract validation, negative cases and pipeline integration."
       },
       tags: ["Python", "Requests", "REST API"],
-      status: "wip",
       github: "https://github.com/joelrequenamartos/requests_api",
       demo: ""
     },
@@ -56,7 +55,7 @@ const PORTFOLIO_DATA = {
         en: "Pure Python back-end test suite with pytest: fixtures, mocking and business logic validation."
       },
       tags: ["Python", "pytest"],
-      status: "planned",
+      status: "wip",
       github: "",
       demo: ""
     }
