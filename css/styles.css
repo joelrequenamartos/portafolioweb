@@ -253,12 +253,6 @@ a:focus-visible, button:focus-visible {
   border-bottom: 1px solid var(--rule);
 }
 
-.hero-text {
-  max-width: 34em;
-  margin-top: 2rem;
-  font-size: 1.15rem;
-}
-
 .hero-stack {
   display: flex;
   flex-wrap: wrap;
@@ -293,7 +287,8 @@ a:focus-visible, button:focus-visible {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   letter-spacing: 0.03em;
-  transition: background 0.35s var(--spring), color 0.35s var(--spring), border-color 0.35s var(--spring);
+  transition: background 0.35s var(--spring), color 0.35s var(--spring),
+    border-color 0.35s var(--spring), transform 0.4s var(--spring);
 }
 
 .btn-primary {
@@ -312,11 +307,6 @@ a:focus-visible, button:focus-visible {
 .btn-outline:hover { color: var(--accent); border-color: var(--accent); }
 
 .btn:active { transform: scale(0.96) !important; transition-duration: 0.1s; }
-
-.btn {
-  transition: background 0.35s var(--spring), color 0.35s var(--spring),
-    border-color 0.35s var(--spring), transform 0.4s var(--spring);
-}
 
 /* ---------- Sections ---------- */
 .section { padding-top: 6rem; padding-bottom: 2rem; }

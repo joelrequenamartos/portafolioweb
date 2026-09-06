@@ -5,7 +5,6 @@ const TRANSLATIONS = {
     "nav.projects": "Proyectos",
     "nav.skills": "Skills",
     "nav.contact": "Contacto",
-    "hero.greeting": "Hola, soy",
     "hero.role": "QA Automation Engineer",
     "hero.text":
       "Automatizando pruebas E2E, API y CI/CD para entregar software con confianza.",
@@ -25,8 +24,6 @@ const TRANSLATIONS = {
     "projects.planned": "Próximamente",
     "skills.title": "Skills & Herramientas",
     "contact.title": "Contacto",
-    "contact.text": "¿Hablamos? Estoy abierto a nuevas oportunidades y colaboraciones.",
-    "contact.cta": "LinkedIn ↗",
     "contact.cardRole": "QA Automation Engineer",
     "footer.text": "Diseñado y construido por Joel Requena, y un poco de ayuda de Claude ;)"
   },
@@ -35,7 +32,6 @@ const TRANSLATIONS = {
     "nav.projects": "Projects",
     "nav.skills": "Skills",
     "nav.contact": "Contact",
-    "hero.greeting": "Hi, I'm",
     "hero.role": "QA Automation Engineer",
     "hero.text":
       "Automating E2E, API and CI/CD testing to ship software with confidence.",
@@ -55,8 +51,6 @@ const TRANSLATIONS = {
     "projects.planned": "Coming soon",
     "skills.title": "Skills & Tools",
     "contact.title": "Contact",
-    "contact.text": "Let's talk! I'm open to new opportunities and collaborations.",
-    "contact.cta": "LinkedIn ↗",
     "contact.cardRole": "QA Automation Engineer",
     "footer.text": "Designed & built by Joel Requena, with a little help from Claude ;)"
   }
