@@ -44,7 +44,7 @@ const PORTFOLIO_DATA = {
         es: "Suite de pruebas de API REST con validación de contratos, casos negativos e integración en pipeline.",
         en: "REST API test suite with contract validation, negative cases and pipeline integration."
       },
-      tags: ["Python", "Requests", "REST API"],
+      tags: ["Postman", "Requests"],
       github: "https://github.com/joelrequenamartos/requests_api",
       demo: ""
     },
@@ -64,7 +64,7 @@ const PORTFOLIO_DATA = {
   skills: [
     {
       group: { es: "Automatización", en: "Automation" },
-      items: ["Playwright", "Selenium", "Cypress", "Appium"]
+      items: ["Playwright", "Pytest"]
     },
     {
       group: { es: "API Testing", en: "API Testing" },
@@ -72,11 +72,11 @@ const PORTFOLIO_DATA = {
     },
     {
       group: { es: "Lenguajes", en: "Languages" },
-      items: ["JavaScript / TypeScript", "Java", "Python", "SQL"]
+      items: ["JavaScript / TypeScript", "Python", "SQL"]
     },
     {
       group: { es: "CI/CD & Herramientas", en: "CI/CD & Tools" },
-      items: ["GitHub Actions", "Jenkins", "Docker", "Jira / Xray", "Git"]
+      items: ["GitHub Actions", "Docker", "Jira / Xray", "Git"]
     }
   ]
 };
