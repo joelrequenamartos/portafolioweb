@@ -68,7 +68,7 @@ const PORTFOLIO_DATA = {
     },
     {
       group: { es: "API Testing", en: "API Testing" },
-      items: ["Postman", "REST Assured", "Newman"]
+      items: ["Postman", "Requests"]
     },
     {
       group: { es: "Lenguajes", en: "Languages" },
