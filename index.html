@@ -3,41 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de QA Automation Engineer — proyectos, skills y experiencia." />
+  <meta name="description" content="Portfolio de Joel Requena, QA Automation Engineer: automatización E2E con Playwright, testing de APIs y back-end con Python, e integración en CI/CD." />
+  <meta name="theme-color" content="#131117" />
+  <meta name="color-scheme" content="dark" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Joel Requena · QA Automation Engineer" />
+  <meta property="og:description" content="Automatización E2E con Playwright, testing de APIs y back-end con Python, e integración en CI/CD." />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary" />
   <title>Joel Requena · QA Automation Engineer</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Joel Requena",
+      "jobTitle": "QA Automation Engineer",
+      "email": "mailto:joelrequenamartos@outlook.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/joelrequenamartos/",
+        "https://github.com/joelrequenamartos"
+      ]
+    }
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link mono" data-i18n="a11y.skip">Saltar al contenido</a>
   <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header">
     <nav class="nav container">
-      <a href="#" class="logo mono">requena.spec.ts</a>
-      <ul class="nav-links">
+      <a href="#top" class="logo mono">requena.spec.ts</a>
+      <ul id="nav-links" class="nav-links">
         <li><a href="#about" data-i18n="nav.about">Sobre mí</a></li>
         <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
         <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
         <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
       </ul>
       <div class="nav-actions">
-        <button id="lang-toggle" class="lang-btn mono" aria-label="Cambiar idioma">EN</button>
-        <button id="menu-toggle" class="menu-btn" aria-label="Menú">☰</button>
+        <button id="lang-toggle" type="button" class="lang-btn mono" data-i18n-label="a11y.lang" aria-label="Ver en inglés">EN</button>
+        <button id="menu-toggle" type="button" class="menu-btn" data-i18n-label="a11y.menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
       </div>
     </nav>
   </header>
 
-  <main>
+  <!-- Panel lateral: cada sección es un test que pasa al llegar a ella -->
+  <aside id="runner" class="runner mono" data-i18n-label="a11y.runner" aria-label="Ejecución de tests del portfolio">
+    <p class="runner-file"><span class="runner-prompt" aria-hidden="true">$</span>npx playwright test</p>
+    <ol class="runner-list">
+      <li><a href="#about" data-run="about"><span class="runner-icon" aria-hidden="true">○</span>about</a></li>
+      <li><a href="#projects" data-run="projects"><span class="runner-icon" aria-hidden="true">○</span>projects</a></li>
+      <li><a href="#skills" data-run="skills"><span class="runner-icon" aria-hidden="true">○</span>skills</a></li>
+      <li><a href="#contact" data-run="contact"><span class="runner-icon" aria-hidden="true">○</span>contact</a></li>
+    </ol>
+    <p id="runner-summary" class="runner-summary">Running 4 tests…</p>
+  </aside>
+
+  <main id="main">
     <!-- HERO -->
-    <section class="hero container">
+    <section id="top" class="hero container">
       <p class="assertion mono">
         <span id="assertion-typed"></span><span class="caret" aria-hidden="true"></span><span id="assertion-status" class="tok-status"></span>
       </p>
       <h1 class="hero-name">Joel <em>Requena</em></h1>
       <p class="hero-role"><span data-i18n="hero.role">QA Automation Engineer</span></p>
-      <ul class="hero-stack mono" aria-label="Stack técnico">
+      <ul class="hero-stack mono" data-i18n-label="a11y.stack" aria-label="Stack técnico">
         <li>Playwright</li>
         <li>TypeScript</li>
         <li>Python</li>
@@ -50,13 +86,14 @@
         <a href="#projects" class="btn btn-primary" data-i18n="hero.ctaProjects">Ver proyectos</a>
         <a href="assets/joelrequenaCV.pdf" class="btn btn-outline" download="joelrequenaCV.pdf" data-i18n="hero.ctaCv">Descargar CV</a>
       </div>
+      <a href="#about" class="scroll-cue mono"><span data-i18n="hero.scrollCue">Desplázate para ejecutar 4 tests</span> <span class="scroll-cue-arrow" aria-hidden="true">↓</span></a>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section container reveal">
       <header class="section-head">
-        <span class="status mono">✓ PASS</span>
-        <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
+        <span class="status mono" data-status="about">✓ PASS</span>
+        <h2 class="section-title" data-i18n="about.title">Sobre <span class="title-hl">mí</span></h2>
       </header>
       <div class="about-text">
         <p class="lede" data-i18n="about.p1">
@@ -79,7 +116,7 @@
     <!-- PROJECTS -->
     <section id="projects" class="section container reveal">
       <header class="section-head">
-        <span class="status mono">✓ PASS</span>
+        <span class="status mono" data-status="projects">✓ PASS</span>
         <h2 class="section-title" data-i18n="projects.title">Proyectos</h2>
       </header>
       <div id="projects-grid" class="projects-list"></div>
@@ -88,7 +125,7 @@
     <!-- SKILLS -->
     <section id="skills" class="section container reveal">
       <header class="section-head">
-        <span class="status mono">✓ PASS</span>
+        <span class="status mono" data-status="skills">✓ PASS</span>
         <h2 class="section-title" data-i18n="skills.title">Skills & Herramientas</h2>
       </header>
       <div id="skills-grid" class="skills-grid"></div>
@@ -97,17 +134,20 @@
     <!-- CONTACT -->
     <section id="contact" class="section container contact reveal">
       <header class="section-head">
-        <span class="status status-fail mono">✗ FAIL — missing_contact</span>
+        <span class="status status-fail mono" data-status="contact">✗ FAIL — missing_contact</span>
         <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
       </header>
       <div class="contact-row">
         <aside class="contact-card">
           <p class="contact-card-name">Joel Requena</p>
           <p class="contact-card-role" data-i18n="contact.cardRole">QA Automation Engineer</p>
-          <p class="mono"><a href="mailto:joelrequenamartos@outlook.com">joelrequenamartos@outlook.com</a></p>
+          <p class="contact-email mono">
+            <a id="contact-email" href="mailto:joelrequenamartos@outlook.com" data-contact>joelrequenamartos@outlook.com</a>
+            <button id="copy-email" type="button" class="copy-btn mono" data-i18n="contact.copy">Copiar</button>
+          </p>
           <div class="contact-card-cta">
-            <a href="https://www.linkedin.com/in/joelrequenamartos/" target="_blank" rel="noopener" class="btn btn-primary">LinkedIn ↗</a>
-            <a href="https://github.com/joelrequenamartos" target="_blank" rel="noopener" class="btn btn-outline">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/joelrequenamartos/" target="_blank" rel="noopener" class="btn btn-primary" data-contact>LinkedIn ↗</a>
+            <a href="https://github.com/joelrequenamartos" target="_blank" rel="noopener" class="btn btn-outline" data-contact>GitHub ↗</a>
           </div>
         </aside>
       </div>
@@ -115,7 +155,7 @@
   </main>
 
   <footer class="site-footer mono">
-    <p data-i18n="footer.text">Diseñado y construido por Joel Requena</p>
+    <p data-i18n="footer.text">Diseñado y construido por Joel Requena, y un poco de ayuda de Claude ;)</p>
   </footer>
 
   <script src="js/data.js"></script>

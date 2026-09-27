@@ -3,6 +3,7 @@
 // Edita este archivo para añadir/quitar proyectos, experiencia
 // y skills. No hace falta tocar el HTML.
 // Cada texto tiene versión es/en para el selector de idioma.
+// status de un proyecto: sin definir (terminado), "wip" o "planned".
 // ============================================================
 
 const PORTFOLIO_DATA = {
@@ -10,7 +11,7 @@ const PORTFOLIO_DATA = {
     {
       role: { es: "QA Analyst and Automation Tester", en: "QA Analyst and Automation Tester" },
       company: "Rank Holding",
-      period: "Abril 2025 — Presente",
+      period: { es: "Abril 2025 — Presente", en: "April 2025 — Present" },
       description: {
         es: "Automatización Front-End con Playwright, Back-End y Data Testing con Python, y pruebas de rendimiento con JMeter, integradas en CI/CD.",
         en: "Front-End automation with Playwright, Back-End and Data Testing with Python, and performance testing with JMeter, integrated into CI/CD."
@@ -19,7 +20,7 @@ const PORTFOLIO_DATA = {
     {
       role: { es: "QA Tester", en: "QA Tester" },
       company: "Zitro Games",
-      period: "2022 — 2024",
+      period: { es: "2022 — 2024", en: "2022 — 2024" },
       description: {
         es: "Testing manual y funcional, diseño de casos de prueba.",
         en: "Manual and functional testing, test case design."
